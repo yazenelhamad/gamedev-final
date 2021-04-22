@@ -10,7 +10,7 @@ const app = new PIXI.Application({
   height: gameHeight,
 });
 
-const stage = app.stage;
+// const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
   await loadGameAssets();

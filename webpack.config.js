@@ -48,10 +48,7 @@ module.exports = (env) => {
       }),
     ],
   };
-  const envConfig = require(path.resolve(
-    __dirname,
-    `./webpack.${env.mode}.js`,
-  ))(env);
+  const envConfig = require(path.resolve(__dirname, `./webpack.${env.mode}.js`))(env);
 
   const mergedConfig = merge(config, envConfig);
 

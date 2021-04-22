@@ -1,5 +1,14 @@
 {
+    "env": {
+        "browser": true,
+        "node": true
+    }, 
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
-    "extends": ["prettier", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "eslint:recommended"]
+    "plugins": ["@typescript-eslint", "prettier"],
+    "extends": [
+        "prettier", 
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "eslint:recommended"
+    ]
 }
