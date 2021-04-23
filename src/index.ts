@@ -1,4 +1,5 @@
 import * as PIXI from "pixi.js";
+import World from "./world";
 import "./style.css";
 
 const gameWidth = 800;
@@ -10,7 +11,7 @@ const app = new PIXI.Application({
   height: gameHeight,
 });
 
-// const stage = app.stage;
+const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
   await loadGameAssets();
@@ -18,6 +19,8 @@ window.onload = async (): Promise<void> => {
   document.body.appendChild(app.view);
 
   resizeCanvas();
+
+  stage.addChild(World());
 };
 
 async function loadGameAssets(): Promise<void> {
