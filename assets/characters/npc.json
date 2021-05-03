@@ -1,1 +1,419 @@
-{"frames":{"npc0.png":{"frame":{"x":0,"y":0,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc1.png":{"frame":{"x":60,"y":0,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc2.png":{"frame":{"x":120,"y":0,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc3.png":{"frame":{"x":180,"y":0,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc4.png":{"frame":{"x":0,"y":60,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc5.png":{"frame":{"x":60,"y":60,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc6.png":{"frame":{"x":120,"y":60,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc7.png":{"frame":{"x":180,"y":60,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc8.png":{"frame":{"x":0,"y":120,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc9.png":{"frame":{"x":60,"y":120,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc10.png":{"frame":{"x":120,"y":120,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc11.png":{"frame":{"x":180,"y":120,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc12.png":{"frame":{"x":0,"y":180,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc13.png":{"frame":{"x":60,"y":180,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc14.png":{"frame":{"x":120,"y":180,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc15.png":{"frame":{"x":180,"y":180,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc16.png":{"frame":{"x":0,"y":240,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc17.png":{"frame":{"x":60,"y":240,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc18.png":{"frame":{"x":120,"y":240,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}},"npc19.png":{"frame":{"x":180,"y":240,"w":60,"h":60},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":60,"h":60},"sourceSize":{"w":60,"h":60}}},"meta":{"app":"https://github.com/piskelapp/piskel/","version":"1.0","image":"npc.png","format":"RGBA8888","size":{"w":240,"h":300}}}
+{
+    "frames": {
+        "npc0.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc1.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 60,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc10.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 120,
+                "y": 120
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc11.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 180,
+                "y": 120
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc12.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 180
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc13.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 60,
+                "y": 180
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc14.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 120,
+                "y": 180
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc15.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 180,
+                "y": 180
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc16.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 240
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc17.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 60,
+                "y": 240
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc18.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 120,
+                "y": 240
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc19.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 180,
+                "y": 240
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc2.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 120,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc3.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 180,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc4.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 60
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc5.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 60,
+                "y": 60
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc6.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 120,
+                "y": 60
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc7.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 180,
+                "y": 60
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc8.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 120
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "npc9.png": {
+            "frame": {
+                "h": 60,
+                "w": 60,
+                "x": 60,
+                "y": 120
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "h": 60,
+                "w": 60,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "animations": {
+        "idle": [
+            "npc9.png"
+        ]
+    },
+    "meta": {
+        "app": "https://github.com/piskelapp/piskel/",
+        "format": "RGBA8888",
+        "image": "npc.png",
+        "size": {
+            "h": 300,
+            "w": 240
+        },
+        "version": "1.0"
+    }
+}
