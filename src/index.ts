@@ -2,8 +2,8 @@ import * as PIXI from "pixi.js";
 import World from "./world";
 import "./style.css";
 
-const gameWidth = 800;
-const gameHeight = 600;
+export const gameWidth = 800;
+export const gameHeight = 600;
 
 const app = new PIXI.Application({
   backgroundColor: 0x000000,
@@ -15,11 +15,9 @@ const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
   await loadGameAssets();
-
   document.body.appendChild(app.view);
 
   resizeCanvas();
-
   stage.addChild(World());
 };
 
