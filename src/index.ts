@@ -1,7 +1,8 @@
 import * as PIXI from "pixi.js";
 import World from "./world";
-//import Platform from "../assets/platform/Platform";
+import Platform, { TTileMap } from "../assets/platform/Platform";
 import "./style.css";
+import { TEXTURES } from "./constants";
 
 export const gameWidth = 800;
 export const gameHeight = 600;
@@ -20,9 +21,15 @@ window.onload = async (): Promise<void> => {
 
   resizeCanvas();
 
-  console.log();
-  //const platform = Platform(PIXI.Loader.use("level"));
-  stage.addChild(World());
+  const container = new PIXI.Container();
+  const loader = PIXI.Loader.shared;
+  loader.load((_, resources) => {
+    const level = resources.level.data as TTileMap;
+    const platform = Platform(level);
+    platform.forEach((sprite) => container.addChild(sprite));
+  });
+  container.addChild(World());
+  stage.addChild(container);
 };
 
 type PIXILoader = typeof PIXI.Loader.shared;
@@ -31,6 +38,7 @@ async function loadGameAssets(): Promise<PIXILoader> {
   return new Promise((res, rej) => {
     const loader = PIXI.Loader.shared;
     loader.add("level", "../assets/platform/level.json");
+    loader.add(TEXTURES.PLATFORM, "../assets/platform/Tileset.json");
 
     loader.onComplete.once(() => {
       res(loader);

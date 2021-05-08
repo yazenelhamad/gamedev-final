@@ -10,10 +10,10 @@ export type TTileMap = {
   tileWidth: number;
 };
 
-export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): PIXI.Sprite[] => {
-  return Array.from({ length: tiles.width })
+export const initializePlatform = (tiles: TTileMap, platform: ILoaderResource): PIXI.Sprite[] => {
+  return Array.from({ length: tiles.height })
     .map((_, idx) => {
-      return tiles.layers[0].data.slice(idx * tiles.width, (idx + 1) * tiles.height);
+      return tiles.layers[0].data.slice(idx * tiles.width, (idx + 1) * tiles.width);
     })
     .map((row, i) =>
       row.map((col, j) => ({
@@ -28,13 +28,16 @@ export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): 
     .reduce((accumulator, row) => row.concat(accumulator), [])
     .filter((tile) => tile.col !== 0)
     .map((tile) => {
-      const tileId = parseInt(tile.id) - 1;
+      const tileId = tile.col - 1;
       const assetUrl = `Tileset${tileId}.png`;
-      const spriteAssets = resource.textures;
-      const sprite = new PIXI.Sprite(spriteAssets[assetUrl]);
-      sprite.x = tile.x;
-      sprite.y = tile.y;
-      return sprite;
+      const spriteAssets = platform?.textures ?? null;
+      if (spriteAssets) {
+        const sprite = new PIXI.Sprite(spriteAssets[assetUrl]);
+        sprite.x = tile.x;
+        sprite.y = tile.y;
+        return sprite;
+      }
+      return new PIXI.Sprite();
     });
 };
 
@@ -42,8 +45,8 @@ export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): 
  * Create and return the platform as a Sprite array.
  */
 const Platform = (tiles: TTileMap): PIXI.Sprite[] => {
-  const resource = PIXI.Loader.shared.resources[TEXTURES.PLATFORM];
-  return initializePlatform(tiles, resource);
+  const platformResource = PIXI.Loader.shared.resources[TEXTURES.PLATFORM];
+  return initializePlatform(tiles, platformResource);
 };
 
 export default Platform;
