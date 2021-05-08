@@ -34,7 +34,7 @@ export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): 
 };
 
 /**
- * Create and return the platfrom as a Sprite array.
+ * Create and return the platform as a Sprite array.
  */
 const Platform = (tiles: TTileMap): PIXI.Sprite[] => {
   const resource = PIXI.Loader.shared.resources[TEXTURES.PLATFORM];
