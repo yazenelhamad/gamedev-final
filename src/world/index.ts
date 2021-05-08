@@ -1,7 +1,7 @@
 import { Sprite, Texture } from "pixi.js";
 
 const World = (): Sprite => {
-  const worldTexture = Texture.from("assets/bg-far.png");
+  const worldTexture = Texture.from("assets/bg.png");
   const world = new Sprite(worldTexture);
   world.position.x = 0;
   world.position.y = 0;
