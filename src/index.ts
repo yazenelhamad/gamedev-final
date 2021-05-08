@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js";
 import World from "./world";
+//import Platform from "../assets/platform/Platform";
 import "./style.css";
 
 export const gameWidth = 800;
@@ -18,15 +19,21 @@ window.onload = async (): Promise<void> => {
   document.body.appendChild(app.view);
 
   resizeCanvas();
+
+  console.log();
+  //const platform = Platform(PIXI.Loader.use("level"));
   stage.addChild(World());
 };
 
-async function loadGameAssets(): Promise<void> {
+type PIXILoader = typeof PIXI.Loader.shared;
+
+async function loadGameAssets(): Promise<PIXILoader> {
   return new Promise((res, rej) => {
     const loader = PIXI.Loader.shared;
+    loader.add("level", "../assets/platform/level.json");
 
     loader.onComplete.once(() => {
-      res();
+      res(loader);
     });
 
     loader.onError.once(() => {
@@ -40,8 +47,6 @@ async function loadGameAssets(): Promise<void> {
 function resizeCanvas(): void {
   const resize = () => {
     app.renderer.resize(window.innerWidth, window.innerHeight);
-    app.stage.scale.x = window.innerWidth / gameWidth;
-    app.stage.scale.y = window.innerHeight / gameHeight;
   };
 
   resize();

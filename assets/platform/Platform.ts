@@ -12,7 +12,9 @@ export type TTileMap = {
 
 export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): PIXI.Sprite[] => {
   return Array.from({ length: tiles.width })
-    .map((_, idx) => tiles.layers[0].data.slice(idx * tiles.width, (idx + 1) * tiles.height))
+    .map((_, idx) => {
+      return tiles.layers[0].data.slice(idx * tiles.width, (idx + 1) * tiles.height);
+    })
     .map((row, i) =>
       row.map((col, j) => ({
         id: `${i}_${j}`,
@@ -26,7 +28,10 @@ export const initializePlatform = (tiles: TTileMap, resource: ILoaderResource): 
     .reduce((accumulator, row) => row.concat(accumulator), [])
     .filter((tile) => tile.col !== 0)
     .map((tile) => {
-      const sprite = new PIXI.Sprite(resource.textures[`Tileset${parseInt(tile.id) - 1}.png`]);
+      const tileId = parseInt(tile.id) - 1;
+      const assetUrl = `Tileset${tileId}.png`;
+      const spriteAssets = resource.textures;
+      const sprite = new PIXI.Sprite(spriteAssets[assetUrl]);
       sprite.x = tile.x;
       sprite.y = tile.y;
       return sprite;
