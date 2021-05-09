@@ -16,39 +16,29 @@ const app = new PIXI.Application({
 const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
-  await loadGameAssets();
-  document.body.appendChild(app.view);
+  loadGameAssets().then(() => {
+    document.body.appendChild(app.view);
 
-  resizeCanvas();
+    resizeCanvas();
 
-  const container = new PIXI.Container();
-  const loader = PIXI.Loader.shared;
-  loader.load((_, resources) => {
-    const level = resources.level.data as TTileMap;
+    const container = new PIXI.Container();
+    const loader = PIXI.Loader.shared;
+    const level = loader.resources.level.data as TTileMap;
     const platform = Platform(level);
+    const offset = 0 - level.tilewidth * 20;
+    container.addChild(World(offset));
+    container.addChild(World(offset + gameWidth));
     platform.forEach((sprite) => container.addChild(sprite));
+    stage.addChild(container);
   });
-  container.addChild(World());
-  stage.addChild(container);
 };
 
-type PIXILoader = typeof PIXI.Loader.shared;
-
-async function loadGameAssets(): Promise<PIXILoader> {
-  return new Promise((res, rej) => {
+async function loadGameAssets(): Promise<void> {
+  return new Promise((res) => {
     const loader = PIXI.Loader.shared;
     loader.add("level", "../assets/platform/level.json");
-    loader.add(TEXTURES.PLATFORM, "../assets/platform/Tileset.json");
-
-    loader.onComplete.once(() => {
-      res(loader);
-    });
-
-    loader.onError.once(() => {
-      rej();
-    });
-
-    loader.load();
+    loader.add([TEXTURES.PLATFORM, TEXTURES.PLAYER]);
+    loader.load(res);
   });
 }
 
