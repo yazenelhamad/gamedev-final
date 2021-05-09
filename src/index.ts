@@ -3,9 +3,13 @@ import World from "./world";
 import Platform, { TTileMap } from "../assets/platform/Platform";
 import "./style.css";
 import { TEXTURES } from "./constants";
+import Player from "./characters/player";
 
 export const gameWidth = 800;
 export const gameHeight = 600;
+
+type GameState = "START" | "GAME" | "END";
+export const gameState: GameState = "START";
 
 const app = new PIXI.Application({
   backgroundColor: 0x000000,
@@ -29,6 +33,8 @@ window.onload = async (): Promise<void> => {
     container.addChild(World(offset));
     container.addChild(World(offset + gameWidth));
     platform.forEach((sprite) => container.addChild(sprite));
+    const player = Player();
+    if (player) container.addChild(player);
     stage.addChild(container);
   });
 };
