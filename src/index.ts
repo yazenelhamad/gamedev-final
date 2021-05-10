@@ -58,6 +58,17 @@ function resizeCanvas(): void {
   window.addEventListener("resize", resize);
 }
 
+//Load the sounds
+sounds.load([
+  "sounds/shoot.wav", 
+  "sounds/music.wav",
+  "sounds/bounce.mp3"
+]);
+
+//Assign the callback function that should run
+//when the sounds have loaded
+sounds.whenLoaded = setup;
+
 function setup() {
   console.log("sounds loaded");
 
@@ -148,6 +159,85 @@ function setup() {
   h.press = function() { 
     music.fadeIn(3);
   };
+}
+
+var i = keyboard(73),
+    j = keyboard(74),
+    k = keyboard(75),
+    l = keyboard(76);
+
+i.press = function(){ shootSound() };
+j.press = function(){ jumpSound() };
+k.press = function(){ explosionSound() };
+l.press = function(){ bonusSound() };
+
+//The sound effect functions
+
+//The shoot sound
+function shootSound() {
+  soundEffect(
+    1046.5,           //frequency
+    0,                //attack
+    0.3,              //decay
+    "sawtooth",       //waveform
+    1,                //Volume
+    -0.8,             //pan
+    0,                //wait before playing
+    1200,             //pitch bend amount
+    false,            //reverse bend
+    0,                //random pitch range
+    25,               //dissonance
+    [0.2, 0.2, 2000], //echo: [delay, feedback, filter]
+    undefined         //reverb: [duration, decay, reverse?]
+  );
+}
+
+//The jump sound
+function jumpSound() {
+  soundEffect(
+    523.25,       //frequency
+    0.05,         //attack
+    0.2,          //decay
+    "sine",       //waveform
+    3,            //volume
+    0.8,          //pan
+    0,            //wait before playing
+    600,          //pitch bend amount
+    true,         //reverse
+    100,          //random pitch range
+    0,            //dissonance
+    undefined,    //echo: [delay, feedback, filter]
+    undefined     //reverb: [duration, decay, reverse?]
+  );
+}
+
+//The explosion sound
+function explosionSound() {
+  soundEffect(
+    16,          //frequency
+    0,           //attack
+    1,           //decay
+    "sawtooth",  //waveform
+    1,           //volume
+    0,           //pan
+    0,           //wait before playing
+    0,           //pitch bend amount
+    false,       //reverse
+    0,           //random pitch range
+    50,          //dissonance
+    undefined,   //echo: [delay, feedback, filter]
+    undefined    //reverb: [duration, decay, reverse?]
+  );
+}
+
+//The bonus points sound
+function bonusSound() {
+  //D
+  soundEffect(587.33, 0, 0.2, "square", 1, 0, 0);
+  //A
+  soundEffect(880, 0, 0.2, "square", 1, 0, 0.1);
+  //High D
+  soundEffect(1174.66, 0, 0.3, "square", 1, 0, 0.2);
 }
 
 
