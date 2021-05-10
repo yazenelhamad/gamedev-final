@@ -20,7 +20,7 @@ export const World = {
     JumpSpeed: 3,
     JumpThreshold: 50,
   },
-  Gravity: 3
+  Gravity: 3,
 };
 
 export const CharacterDirections = {
