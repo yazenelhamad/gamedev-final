@@ -36,6 +36,17 @@ window.onload = async (): Promise<void> => {
     const player = Player();
     if (player) container.addChild(player);
     stage.addChild(container);
+    
+    //Load the sounds
+sounds.load([
+  "sounds/shoot.wav", 
+  "sounds/music.wav",
+  "sounds/bounce.mp3"
+]);
+
+//Assign the callback function that should run
+//when the sounds have loaded
+sounds.whenLoaded = setup;
   });
 };
 
@@ -58,16 +69,7 @@ function resizeCanvas(): void {
   window.addEventListener("resize", resize);
 }
 
-//Load the sounds
-sounds.load([
-  "sounds/shoot.wav", 
-  "sounds/music.wav",
-  "sounds/bounce.mp3"
-]);
 
-//Assign the callback function that should run
-//when the sounds have loaded
-sounds.whenLoaded = setup;
 
 function setup() {
   console.log("sounds loaded");
