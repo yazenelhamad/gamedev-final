@@ -403,7 +403,27 @@
     },
     "animations": {
         "idle": [
-            "npc9.png"
+            "npc0.png",
+            "npc1.png",
+            "npc2.png",
+            "npc3.png"
+            
+            
+        ],
+        "running": [
+            "npc8.png",
+            "npc9.png",
+            "npc10.png",
+            "npc11.png",
+            "npc12.png",
+            "npc13.png"
+        ],
+        "jumping": [
+            "npc16.png"
+        ],
+        "falling": [
+            "npc22.png",
+            "npc23.png"
         ]
     },
     "meta": {
