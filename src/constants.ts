@@ -5,32 +5,32 @@ export const TEXTURES = {
 
 export const Scene = {
   Width: 1280,
-  Height: 578
+  Height: 578,
 };
 
 export const KeyCodes = {
   Space: "Space",
   ArrowLeft: "ArrowLeft",
-  ArrowRight: "ArrowRight"
+  ArrowRight: "ArrowRight",
 };
 
 export const World = {
   Character: {
     Speed: 2,
     JumpSpeed: 3,
-    JumpThreshold: 50
+    JumpThreshold: 50,
   },
   Gravity: 3
 };
 
 export const CharacterDirections = {
   Left: -1,
-  Right: 1
+  Right: 1,
 };
 
 export enum CharacterMode {
   Jumping,
   Running,
   Falling,
-  Idle
+  Idle,
 }
